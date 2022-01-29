@@ -1,0 +1,82 @@
+// Media
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+
+  .menu {
+    position: absolute;
+    top: 99%;
+    right: 0;
+    flex-direction: column;
+    background: $half-white;
+    width: 40%;
+    height: 100vh;
+    justify-content: center;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+
+    li {
+      margin-bottom: 10rem;
+    }
+
+    a {
+      font-size: 2.5rem !important;
+    }
+  }
+
+  form {
+    position: absolute;
+    top: 99%;
+    right: 0;
+    min-width: 40%;
+    z-index: 1;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+
+  .active {
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+  }
+
+  #menu-bar {
+    display: inline-block !important;
+  }
+
+  .home {
+    flex-direction: column-reverse;
+
+    .content {
+      text-align: center;
+      margin-top: 3rem;
+
+      h1 {
+        margin: 0 auto;
+        width: 90%;
+      }
+
+      .groups {
+        justify-content: center;
+      }
+    }
+  }
+
+  .main-title {
+    width: 30%;
+  }
+
+  .categories {
+    .categories-list {
+      flex-direction: column;
+
+      li {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

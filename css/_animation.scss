@@ -1,0 +1,18 @@
+// Start Animation
+@keyframes up-down {
+  0%,
+  100% {
+    transform: translateY(0rem);
+  }
+
+  50% {
+    transform: translateY(1rem);
+  }
+}
+
+@keyframes down {
+  0% {
+    transform: scaleY(0);
+  }
+}
+// End Animation
