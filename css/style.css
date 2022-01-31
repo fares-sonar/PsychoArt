@@ -359,8 +359,8 @@ section {
 .collection_container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(35rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  -ms-grid-columns: (minmax(40rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   gap: 2rem;
 }
 
@@ -812,14 +812,11 @@ section {
   .main-title {
     width: 30%;
   }
-  .categories .categories-list {
+  .categories {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  .categories .categories-list li {
-    margin-bottom: 1rem;
   }
 }
 

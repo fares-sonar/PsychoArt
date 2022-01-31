@@ -288,7 +288,7 @@ section {
 
   &_container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
     gap: 2rem;
 
     .container_box {
@@ -698,13 +698,7 @@ section {
   }
 
   .categories {
-    .categories-list {
-      flex-direction: column;
-
-      li {
-        margin-bottom: 1rem;
-      }
-    }
+    flex-direction: column;
   }
 
   // .footer{

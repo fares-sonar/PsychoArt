@@ -18,6 +18,17 @@ window.onscroll = () => {
 let collectionFilter = document.querySelectorAll(".collection .filter");
 let containerBox = document.querySelectorAll(".collection .container_box");
 
+if (window.localStorage.getItem("data")) {
+  containerBox.forEach((box) => {
+    box.classList.remove("active");
+    box.classList.add("hide");
+    if (box.getAttribute("data-iteam") == window.localStorage.getItem("data")) {
+      box.classList.remove("hide");
+      box.classList.add("active");
+    }
+  });
+}
+
 collectionFilter.forEach((filter) => {
   filter.onclick = () => {
     collectionFilter.forEach((fil) => fil.classList.remove("active"));
@@ -25,29 +36,35 @@ collectionFilter.forEach((filter) => {
 
     let dataFilter = filter.getAttribute("data-filter");
 
+    window.localStorage.setItem("data", dataFilter);
+
     containerBox.forEach((box) => {
       box.classList.remove("active");
       box.classList.add("hide");
 
-      if (box.getAttribute("data-iteam") == dataFilter || dataFilter == "all") {
+      if (
+        box.getAttribute("data-iteam") == window.localStorage.getItem("data") ||
+        dataFilter == "all"
+      ) {
         box.classList.remove("hide");
         box.classList.add("active");
       }
     });
   };
 });
+
 // End Collection Section
 
 // Start Question Section
 let contentBox = document.querySelectorAll(".faqs .box");
-contentBox.forEach(box => {
-  box.onclick = ()=>{
-    contentBox.forEach(item =>{
-      item.classList.remove('show');
+contentBox.forEach((box) => {
+  box.onclick = () => {
+    contentBox.forEach((item) => {
+      item.classList.remove("show");
     });
-    box.classList.add('show')
-  }
-})
+    box.classList.add("show");
+  };
+});
 // End Question Section
 
 // Start Swiper
